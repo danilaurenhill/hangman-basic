@@ -1,9 +1,13 @@
 require 'hangman_letter_check'
 
-puts "What's the word to guess?"
-word = gets.chomp
+random = ["lol","crayon","crazy","freezing","cats","happy","red","phone","ten"]
+# puts "What's the word to guess?"
+# word = gets.chomp
+puts "Guess the word..."
+word = random.shuffle.first
 
 num_tries = 7
+
 
 letters = []
 
@@ -27,6 +31,10 @@ begin
   else
     puts "NO!"
   end
+
+  # if guess.include?(sym_num)
+  #   puts "That's not a letter."
+  # end
 
   num_tries = num_tries - 1
   if num_tries == 0 
