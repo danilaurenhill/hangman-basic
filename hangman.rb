@@ -1,24 +1,40 @@
+require 'hangman_letter_check'
+
 puts "What's the word to guess?"
-word_to_guess = gets.chomp
+word = gets.chomp
 
-num_tries = 5
+num_tries = 7
 
-letters_guessed = []
+letters = []
 
-word_progress = "_" * word_to_guess.length
+progress = "_" * word.length
 
 begin 
-  puts "Word progress so far: #{word_progress}"
+  puts "Word progress so far: #{progress}"
   puts "#{num_tries} tries left."
-  puts "Letters guessed so far: #{letters_guessed}"
+  puts "Letters guessed so far: #{letters}"
   puts "Enter a letter:"
-  letter = gets.chomp
-  letters_guessed << letter
-end
+  guess = gets.chomp
+  letters << guess
 
-if word_to_guess.include?(letter)
+  if word.include?(guess)
     puts "Good guess!"
-else
-    puts "Bummer!"
-end
+    indexes = word.occurrences(guess) 
+
+    indexes.each do |index|
+      progress[index] = guess
+    end
+  else
+    puts "NO!"
+  end
+
+  num_tries = num_tries - 1
+  if num_tries == 0 
+    puts "Oh NO! The game is over"
+    puts "The word was #{word}"
+  else
+    puts "You won, the word is #{word}!"
+  end
+
+  end while num_tries > 0 and progress.include? '_'
 
