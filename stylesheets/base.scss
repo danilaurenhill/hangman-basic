@@ -1,8 +1,13 @@
-$green: #16DDA4;
+$green: #006666;
 $font: Roboto, sans-serif;
 
 h1 {
   text-align: center;
   font-size: modular-scale(4);
+  color: $green;
+}
+
+h3 {
+  font-size: modular-scale(2);
   color: $green;
 }
