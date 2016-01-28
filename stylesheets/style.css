@@ -11,6 +11,22 @@ h1 {
 
 h3 {
   font-size: 1.77689em;
-  color: #006666; }
+  color: #009999; }
+
+.input-text {
+  text-align: center; }
+
+#guess-button {
+  display: inline-block;
+  background-color: #009999;
+  cursor: pointer;
+  color: white;
+  font-family: 100% Roboto, sans-serif;
+  font-size: 1em;
+  padding: 10px;
+  margin: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */

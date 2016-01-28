@@ -20,7 +20,7 @@ lettersGuessed = lettersMatched = '';
     man = document.getElementById("man");
     guessInput = document.getElementById("letter");
 
-    man.innerHTML = 'You have ' + lives + ' lives remaining';
+    man.innerHTML = 'You have ' + tries + ' tries remaining';
     output.innerHTML = '';
 
     document.getElementById("letter").value = '';

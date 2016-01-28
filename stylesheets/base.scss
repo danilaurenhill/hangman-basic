@@ -1,4 +1,5 @@
 $green: #006666;
+$blueish: #009999;
 $font: Roboto, sans-serif;
 
 h1 {
@@ -9,5 +10,23 @@ h1 {
 
 h3 {
   font-size: modular-scale(2);
-  color: $green;
+  color: $blueish;
+}
+
+.input-text {
+  text-align: center;
+}
+
+#guess-button {
+  display:inline-block;
+  background-color: $blueish;
+  cursor:pointer;
+  color:white;
+  font-family: 100% $font;
+  font-size: modular-scale(0);
+  padding: 10px;
+  margin: 10px;
+  text-decoration:none;
+  border: none;
+  border-radius: 50%
 }
